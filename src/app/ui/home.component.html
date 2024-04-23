@@ -1,0 +1,33 @@
+<app-page-header text="Home Page"></app-page-header>
+<div class="mx-3">
+    <p>
+        This is the first Angular Application
+    </p>
+    <h1>{{ title }} {{ 10 + 20 }}</h1>
+    <button class="btn btn-primary btn-sm" (click)="click($event)">click me</button>
+</div>
+
+<div class="card shadow m-auto w-50">
+    <div class="card-header bg-warning p-2">
+        <h4>Product Details</h4>
+    </div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-3">Product Id</dt>
+            <dd class="col-9">{{ product.productId }}</dd>
+            <dt class="col-3">Product Name</dt>
+            <dd class="col-9">{{ product.productName }}</dd>
+            <dt class="col-3">Unit Price</dt>
+            <dd class="col-9">{{ product.unitPrice }}</dd>
+            <dt class="col-3">Stock Level</dt>
+            <dd class="col-9">{{ product.unitsInStock }}</dd>
+            <dt class="col-3">Discontinued?</dt>
+            <dd class="col-9">{{ product.discontinued }}</dd>
+        </dl>
+        <button (click)="updatePrice()" class="btn btn-success">Update Price</button>
+        <button (click)="updateStock()" class="btn btn-danger mx-1">Update Stock</button>
+        <p class="lead mt-2">
+            Product JSON: {{ product | json }}
+        </p>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="row mb-3">
+    <div class="col-12">
+        <h3 class="text-center fs-1">Manage Products</h3>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 border-end">
+            <!-- The property productList of the product Component is 
+            assigned to the productList input property
+            of the ProductListComponent
+            -->
+            <products-list [productList]="productList" (selectedItemEvent)="select($event)">
+            </products-list>
+        </div>
+        <div class="col-6">
+            <products-detail [productItem]="selectedProduct"></products-detail>
+        </div>
+    </div>
+</div>
