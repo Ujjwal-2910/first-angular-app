@@ -1,8 +1,9 @@
 <div class="card shadow m-auto m-2">
-    <div class="card-header bg-warning text-center">
-        <div class="fs-3 text-uppercase">Product List</div>
+    <div class="card-header bg-warning d-flex justify-content-between align-items-center">
+        <div class="fs-3 text-uppercase text-center flex-grow-1">Product List</div>
+        <button type="button" (click)="addNewItemClick()" class="btn btn-dark btn-sm">Add New</button>
     </div>
-    <div class="card-body">
+    <div class="card-body overflow-y-visible">
         <table class="table table-dark table-striped table-hover">
             <thead>
                 <tr>
@@ -17,9 +18,12 @@
                     <td>{{item.productName}}</td>
                     <td>{{item.unitPrice | currency}}</td>
                     <td>
-                        <button class="btn btn-sm btn-primary" (click)="viewItemClick(item.productId)">View</button>
-                        <button class="btn btn-sm btn-success mx-1">Edit</button>
-                        <button class="btn btn-sm btn-danger">Remove</button>
+                        <button class="btn btn-sm btn-primary"
+                            (click)="viewItemClick(item.productId)">View</button>
+                        <button class="btn btn-sm btn-success mx-1"
+                            (click)="editItemClick(item.productId)">Edit</button>
+                        <button class="btn btn-sm btn-danger"
+                            (click)="deleteItemClick(item.productId)">Remove</button>
                     </td>
                 </tr>
             </tbody>

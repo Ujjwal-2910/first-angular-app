@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,7 +32,10 @@ import { ProductsDetailComponent } from './products/products-detail.component';
   ],
   /* imports - lists all the external modules that are required in this module */
   imports: [
-    BrowserModule,
+    BrowserModule, // Shoule be the first module to be imported always,
+    // Any other module imports should happen after the BrowserModule import.
+    FormsModule, // adds the improt {FormsModule} From Angular/form
+    // -> available for the entire project now
     AppRoutingModule
   ],
   /* exports - list al the app module that will be available to

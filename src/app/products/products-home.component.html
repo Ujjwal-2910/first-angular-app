@@ -10,11 +10,18 @@
             assigned to the productList input property
             of the ProductListComponent
             -->
-            <products-list [productList]="productList" (selectedItemEvent)="select($event)">
+            <products-list [productList]="productList"
+                (selectedItemEvent)="select($event)"
+                (addNewItemEvent)="addNewClick()">
             </products-list>
         </div>
         <div class="col-6">
-            <products-detail [productItem]="selectedProduct"></products-detail>
+            <products-detail [selectedProduct]="selectedProduct"
+                [isDeleteAction]="isDeleteAction"
+                [isEditAction]="isEditAction"
+                (resetEvent)="resetSelection($event)"
+                (saveEvent)="saveDetails($event)"
+                (deleteEvent)="deleteItem($event)"></products-detail>
         </div>
     </div>
 </div>
