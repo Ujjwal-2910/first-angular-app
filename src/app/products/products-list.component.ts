@@ -22,15 +22,15 @@ export class ProductsListComponent {
     var id = parseInt(productId);
     // console.log("Step 1:", id);
     // this.selectItemEvent.emit(id);
-    this.selectItemEvent.emit({productId: id, actionType: 1});
+    this.selectItemEvent.emit({ productId: id, actionType: 1 });
   }
   editItemClick(productId: any) {
     var id = parseInt(productId);
-    this.selectItemEvent.emit({productId: id, actionType: 2});
+    this.selectItemEvent.emit({ productId: id, actionType: 2 });
   }
   deleteItemClick(productId: any) {
     var id = parseInt(productId);
-    this.selectItemEvent.emit({productId: id, actionType: 3});
+    this.selectItemEvent.emit({ productId: id, actionType: 3 });
   }
   addNewItemClick() {
     this.addNewItemEvent.emit();

@@ -1,1 +1,13 @@
-<p>site-error works!</p>
+<div class="mt-5 alert alert-danger m-auto w-75 text-center">
+    <div class="h1">OOPS!</div>
+    <p class="lead">
+        Looks like somethingwent wrong. Please try again or report the error
+        to your system administrator.
+    </p>
+    <div>
+        <h3>Error code: {{ errorCode }}</h3>
+        <p class="lead">
+            <b>Error message:</b> {{ errorMessage }}
+        </p>
+    </div>
+</div>
